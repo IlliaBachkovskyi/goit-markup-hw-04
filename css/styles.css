@@ -132,7 +132,22 @@ p {
   margin-left: auto;
   align-items: center;
 }
-
+.mail-header::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url("../images/icons/mail.svg");
+}
+.tel-header::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url("../images/icons/phone.svg");
+}
 /* HEADER-STYLES(index+portfolio) */
 
 /* MAIN-STYLES */
@@ -155,6 +170,10 @@ p {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/heroBackground.jpg");
 }
 .section-hero-title {
   margin: auto auto 30px auto;
