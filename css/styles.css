@@ -99,6 +99,10 @@ p {
   line-height: 1.143;
   letter-spacing: 0.02em;
 }
+.link-header:hover .icon-header-contacts,
+.link-header:focus .icon-header-contacts {
+  fill: var(--aiming-color);
+}
 .link-header:hover,
 .link-header:focus {
   color: var(--aiming-color);
@@ -132,21 +136,8 @@ p {
   margin-left: auto;
   align-items: center;
 }
-.mail-header::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 12px;
+.icon-header-contacts {
   margin-right: 10px;
-  background-image: url("../images/icons/mail.svg");
-}
-.tel-header::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-image: url("../images/icons/phone.svg");
 }
 /* HEADER-STYLES(index+portfolio) */
 
@@ -173,7 +164,11 @@ p {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/heroBackground.jpg");
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/heroBackground.jpg");
 }
 .section-hero-title {
   margin: auto auto 30px auto;
@@ -219,9 +214,9 @@ p {
   background-color: var(--background-color-our-team-section);
   display: flex;
   justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  align-items: center;
   margin-bottom: 30px;
+  height: 120px;
   box-sizing: border-box;
 }
 .features-title {
@@ -298,6 +293,7 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--description-text-color);
+  margin-bottom: 30px;
 }
 .our-team-title-card {
   padding-top: 30px;
@@ -306,14 +302,13 @@ p {
 /* icons */
 .icons-our-team-list {
   margin: 0 auto;
-  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
 .icons-our-team-list li:not(:last-child) {
   margin-right: 10px;
 }
-.icons-our-team-list li {
+.icons-our-team-list a {
   width: 44px;
   height: 44px;
   background-color: var(--body-color);
@@ -322,16 +317,14 @@ p {
   justify-content: center;
   align-items: center;
 }
-.icons-our-team-list li:hover,
-.icons-our-team-list li:focus {
+.icons-our-team-list a:hover,
+.icons-our-team-list a:focus {
   background-color: var(--aiming-color);
-}
-.icon {
-  fill: var(--social-lincs-client-color);
-}
-.icons-our-team-list li:hover .icon,
-.icons-our-team-list li:focus .icon {
   fill: var(--body-color);
+}
+.icon-our-team-card {
+  display: flex;
+  fill: var(--social-lincs-client-color);
 }
 /* section-Our-Team */
 /* section-Regular-Customers */
@@ -346,7 +339,7 @@ p {
   display: flex;
   justify-content: center;
 }
-.icons-regular-customers-list > li {
+.icons-regular-customers-list a {
   box-sizing: border-box;
   border: 1px solid var(--social-lincs-client-color);
   padding: 16px 32px;
@@ -354,15 +347,16 @@ p {
 .icons-regular-customers-list > li:not(:last-child) {
   margin-right: 30px;
 }
-.icons-regular-customers-list li:hover,
-.icons-regular-customers-list li:focus {
+.icons-regular-customers-list a:hover,
+.icons-regular-customers-list a:focus {
   border: 1px solid var(--aiming-color);
 }
 .icon-client {
+  display: flex;
   fill: var(--social-lincs-client-color);
 }
-.icons-regular-customers-list li:hover .icon-client,
-.icons-regular-customers-list li:focus .icon-client {
+.icon-client:hover,
+.icon-client:focus {
   fill: var(--aiming-color);
 }
 /* section-Regular-Customers */
@@ -402,18 +396,16 @@ p {
 }
 .footer-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .footer-logo-nav-container {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin-right: 70px;
 }
 .footer-list > li:not(:last-child) {
   margin-bottom: 9px;
-}
-.icons-footer-card {
-  margin: 72px auto 100px 70px;
 }
 .icons-footer-card h3 {
   width: 145px;
@@ -433,7 +425,7 @@ p {
 .icons-footer-list li:not(:last-child) {
   margin-right: 10px;
 }
-.icons-footer-list li {
+.icons-footer-list a {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -442,11 +434,12 @@ p {
   justify-content: center;
   align-items: center;
 }
-.icons-footer-list li:hover,
-.icons-footer-list li:focus {
+.icons-footer-list a:hover,
+.icons-footer-list a:focus {
   background-color: var(--aiming-color);
 }
 .icon-footer {
+  display: flex;
   fill: var(--body-color);
 }
 /* FOOTER-STYLES(index+portfolio) */
